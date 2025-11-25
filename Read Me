@@ -1,1 +1,62 @@
+🩸 Effect of Physiological Parameters on PPG-Signal–Based Glucose Estimation
 
+This project investigates how physiological parameters—such as heart rate, blood pressure, and oxygen saturation—affect the performance of PPG-signal–based blood glucose estimation models.
+The goal is to understand which features contribute most to accurate glucose prediction and how variations in physiological conditions influence model reliability.
+
+🔬 Method Overview
+
+The code implements a full experimental pipeline for:
+
+✔ 1. PPG Signal Preprocessing
+
+Noise removal
+
+Smoothing and normalization
+
+Extraction of clean PPG waveforms
+
+Calculation of time-domain and frequency-domain features
+
+✔ 2. Feature Engineering
+
+Physiological parameters extracted or used include:
+
+Heart rate
+
+SpO₂
+
+Blood pressure
+
+PPG morphological features
+
+Derivative features (PPG-first derivative, PPG-second derivative)
+
+These features are integrated with glucose labels for model training.
+
+✔ 3. Machine Learning Pipeline
+
+The project evaluates several regression models for glucose estimation, including:
+
+Random Forest Regressor
+
+XGBoost
+
+Linear Regression
+
+Support Vector Regression
+
+The models are trained and evaluated on combined PPG + physiological feature sets to assess their effect on accuracy.
+
+✔ 4. Performance Evaluation
+
+The code computes:
+
+Mean Absolute Error (MAE)
+
+Root Mean Square Error (RMSE)
+
+R² score
+
+Scatter plots & prediction–vs–ground-truth curves
+
+These metrics are compared across different feature combinations to determine the influence of physiological parameters on glucose estimation performance.
